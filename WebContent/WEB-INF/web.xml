@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+            http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+    <display-name>Aplikasi Tabungan</display-name>
+    
+    <context-param>
+        <param-name>jdbcURL</param-name>
+        <param-value>jdbc:mysql://localhost:3306/tabungan?serverTimezone=Asia/Bangkok</param-value>
+    </context-param>
+    
+    <context-param>
+        <param-name>jdbcUsername</param-name>
+        <param-value>root</param-value>
+    </context-param>
+    
+    <context-param>
+        <param-name>jdbcPassword</param-name>
+        <param-value></param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>nasabah</servlet-name>
+        <servlet-class>com.tabungan.servlet.NasabahServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>nasabah</servlet-name>
+        <url-pattern>/nasabah</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>nasabah</servlet-name>
+        <url-pattern>/nasabah/new</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>nasabah</servlet-name>
+        <url-pattern>/nasabah/insert</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>nasabah</servlet-name>
+        <url-pattern>/nasabah/delete</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>nasabah</servlet-name>
+        <url-pattern>/nasabah/edit</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>nasabah</servlet-name>
+        <url-pattern>/nasabah/update</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>nasabah</servlet-name>
+        <url-pattern>/nasabah/list</url-pattern>
+    </servlet-mapping>
+
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/error.jsp</location>
+    </error-page>
+</web-app>
